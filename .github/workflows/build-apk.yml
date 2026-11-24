@@ -29,9 +29,12 @@ jobs:
         with:
           packages: 'platform-tools platforms;android-35 build-tools;35.0.0'
             
-      - name: Build APK
-        run: gradle assembleDebug
-
+      - name: Cari Lokasi Proyek
+        run: |
+         pwd
+         ls -la
+         find . -maxdepth 5 \( -name settings.gradle -o -name settings.gradle.kts \) -print
+     
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
