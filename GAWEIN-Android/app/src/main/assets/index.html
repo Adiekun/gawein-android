@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#087b45">
+<title>GAWEIN — Kerja Lebih Mudah</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="role-worker">
+<header class="topbar">
+  <a class="brand" href="#"><span class="brand-mark">G</span><span>GAWEIN<small>Kerja lebih mudah</small></span></a>
+  <nav><a href="#jobs">Lowongan</a><a href="#how">Cara kerja</a></nav>
+  <button class="role-switch" id="roleToggle">Mode: Pekerja ▾</button>
+</header>
+<main>
+  <section class="role-dashboard" id="roleDashboard" aria-live="polite"></section>
+  <section class="hero" id="hero">
+    <div class="hero-copy">
+      <span class="eyebrow" id="heroEyebrow">GAWEIN • PELUANG KERJA</span>
+      <h1 id="heroTitle">Temukan pekerjaan <em>terbaik.</em></h1>
+      <p id="heroText">Pilih pekerjaan yang sesuai, ajukan upah, dan capai kesepakatan.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#jobs" id="heroAction">⌕ Cari pekerjaan</a>
+        <span class="hero-note">Mudah · Cepat · Transparan</span>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true"><div class="visual-orbit"></div><div class="visual-icon" id="heroIcon">👷</div><div class="visual-chip">✓ Siap bekerja</div></div>
+  </section>
+
+  <section class="section" id="jobs">
+    <div class="section-head">
+      <div><span class="eyebrow" id="listEyebrow">PELUANG TERBARU</span><h2 id="listTitle">Lowongan terbaru</h2><p id="listText">Temukan pekerjaan di sekitar Anda.</p></div>
+      <button class="btn btn-primary" id="newJobBtn">＋ Pasang lowongan</button>
+    </div>
+    <div class="filters">
+      <input id="searchInput" type="search" placeholder="⌕ Cari pekerjaan atau lokasi..." aria-label="Cari pekerjaan">
+      <select id="categoryFilter" aria-label="Pilih kategori">
+        <option value="">Semua kategori</option><option>Perbaikan</option><option>Kebersihan</option><option>Desain</option><option>Transportasi</option><option>Lainnya</option>
+      </select>
+    </div>
+    <div class="job-grid" id="jobList"></div>
+  </section>
+
+  <section class="section how" id="how">
+    <span class="eyebrow">CARA KERJA</span><h2>Empat langkah menuju kesepakatan.</h2>
+    <div class="steps">
+      <article><span>01</span><b>Pasang</b><small>Jelaskan kebutuhan kerja.</small></article>
+      <article><span>02</span><b>Ajukan</b><small>Berikan penawaran upah.</small></article>
+      <article><span>03</span><b>Negosiasi</b><small>Diskusikan harga bersama.</small></article>
+      <article><span>04</span><b>Sepakati</b><small>Setujui harga final.</small></article>
+    </div>
+  </section>
+</main>
+<footer><a class="brand" href="#"><span class="brand-mark">G</span><span>GAWEIN<small>Kerja lebih mudah</small></span></a><span>Prototype GAWEIN</span></footer>
+
+<nav class="mobile-nav" aria-label="Navigasi utama">
+  <a href="#" class="active"><span>⌂</span>Beranda</a><a href="#jobs"><span>⌕</span>Cari</a><a href="#jobs" id="navPost"><span>＋</span>Pasang</a><a href="#roleDashboard"><span>◉</span>Akun</a>
+</nav>
+
+<div class="modal-backdrop" id="modalBackdrop" hidden>
+  <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="close" id="closeModal" aria-label="Tutup">×</button>
+    <div id="modalContent"></div>
+  </section>
+</div>
+<script src="js/app.js"></script>
+</body></html>
